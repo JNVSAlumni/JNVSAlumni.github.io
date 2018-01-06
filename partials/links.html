@@ -1,0 +1,20 @@
+<div ng-controller="LinksCtrl">
+    <div class="mdl-grid demo-content collections">
+        <div class="demo-card mdl-shadow--2dp abt-card color4">
+            <h5>JNV Links</h5>
+            <ul style="list-style: none;">
+                <li ng-repeat="i in jnvLinks"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}"
+                        target="_blank">{{i.title}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mdl-grid demo-content collections">
+        <div class="demo-card mdl-shadow--2dp abt-card color5">
+            <h5>Career Links</h5>
+            <ul style="list-style: none;">
+                <li ng-repeat="i in careerLinks"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}"
+                        target="_blank">{{i.title}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

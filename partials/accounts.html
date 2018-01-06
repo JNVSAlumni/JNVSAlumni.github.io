@@ -1,0 +1,25 @@
+<style>
+    .icon-fix {margin-right: 5px !important;height: 22px;font-size: 22px;box-sizing: border-box;color: #757575;float: left;}
+    .fl-lt {float: left;padding-right: 10px;}
+    .crd {margin-bottom: 5px;}
+</style>
+<div ng-controller="AccountsCtrl">
+    <div class="mdl-grid demo-content collections">
+        <div class="demo-card mdl-shadow--2dp abt-card color10 crd">
+            <div>
+                <h5>Transaction Details</h5>
+                <p>Contribution and expenses details from Alumni Fund. Please Contact Gautam Kumar ( Call: <a href="tel:+919006922738">+91-9006922738</a> or <a href="https://api.whatsapp.com/send?phone=919006922738">Send WhatsApp Message</a> ) to make contributions or queries.</p>
+                <h6>Net Balance: &#8377; {{totalBalance}}</h6>
+            </div>
+        </div>
+        <div ng-class="i.Credit > 0 ? creditClass : debitClass" ng-repeat="i in transactions | reverse">
+            <span class="fl-lt"><i class="material-icons  icon-fix">event</i>{{i.Date| date:'MMMM dd, yyyy'}}</span>            
+            <span class="fl-lt" ng-if="i.Credit"><i class="material-icons  icon-fix">add_circle</i>&#8377; {{i.Credit}}</span>
+            <span class="fl-lt" ng-if="i.Debit"><i class="material-icons  icon-fix">remove_circle</i>&#8377; {{i.Debit}}</span>
+            <span class="fl-lt"><i class="material-icons  icon-fix">monetization_on</i>&#8377; {{i.Balance}}</span>                
+            <span class="fl-lt"><i class="material-icons  icon-fix">person</i>{{i.Name}}</span>
+            <span class="fl-lt"><i class="material-icons  icon-fix">person_pin_circle</i>{{i.Batch}}</span>
+            <span class="fl-lt"><i class="material-icons  icon-fix">info</i>{{i.Description}}</span>
+        </div>
+    </div>
+</div>

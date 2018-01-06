@@ -1,2 +1,3 @@
-# JNVSAlumni.github.io
-JNV Sitamarhi Alumni Association
+# JNVSAlumniWebsite
+
+The Official Website of JNV Sitamarhi Alumni Association

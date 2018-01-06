@@ -1,0 +1,32 @@
+<div ng-controller="HomeCtrl">
+    <div class="mdl-grid demo-content">
+        <div class="demo-card mdl-shadow--2dp color1">
+            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                </div>
+                <!--<div class="mdl-card__actions">
+                    <span class="demo-card-image__filename">Bipul Raman</span>
+                </div>-->
+            </div>        
+            <div class="abt-card">
+                <h5>JNV&nbsp;Sitamarhi Alumni Association</h5>
+                <h6>The online alumni network of JNV Sitamarhi</h6>
+                <p>
+                Welcome to the official website of JNV Sitamarhi Alumni Association. 
+                </p>
+                <p>
+                The Jawahar Navodaya Vidyalaya Sitamarhi Alumni Association serves to enrich the alumni experience and foster benificial relationships in the Jawahar Navodaya Vidyalaya community. The motive of Alumni Association is to create a network ensuring development of JNV students and alumni leading to overall development of alma matter by providing necessary resources, guidances, motivations and financial help in their area of interest. Join us on social networks to get connected to other alumni, access the wealth of benifits, and turn on the power of your alumni membership.
+                </p>            
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mdl-grid demo-content" ng-repeat="i in news">
+        <div class="demo-card mdl-shadow--2dp abt-card color10" ng-if="i.title.length > 0">                  
+                <h5>{{i.title}}</h5>
+                <p><b>{{i.date}} | </b>{{i.news}}</p> 
+                <span ng-if="i.link.length > 0"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}" target="_blank">Read More..</a></span>            
+        </div>        
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div ng-controller="MediaCtrl">
+    <div class="mdl-grid demo-content collections">
+        <div class="demo-card mdl-shadow--2dp abt-card color1">
+            <h5>Photo Albums</h5>
+            <ul>
+                <li ng-repeat="i in albums"><i class="mdl-color-text--blue-grey-400 material-icons mdl">camera_alt</i>&nbsp;<a href="{{i.link}}" target="_blank">{{i.title}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

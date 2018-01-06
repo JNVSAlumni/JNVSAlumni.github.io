@@ -1,0 +1,22 @@
+<div ng-controller="CareerCtrl">
+    <div class="mdl-grid demo-content collections">
+        <div class="demo-card mdl-shadow--2dp abt-card color2">
+            <p>To help Alumni in a better way to shape their career, here we are listing subject matter related Alumni who can
+                help you to go ahead in the related career field. You can reach out to their facebook profile by clicking
+                on their name.</p>
+        </div>
+    </div>
+
+    <div class="mdl-grid demo-content collections" ng-repeat="career in careers">
+        <div class="demo-card mdl-shadow--2dp abt-card color8">
+            <h5>{{career.title}}</h5>
+            <div ng-repeat="degree in career.degree">
+                <h6>{{degree.title}}</h6>
+                <ul style="list-style: none;">
+                    <li ng-repeat="spoc in degree.spoc"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{spoc.profile}}"
+                            target="_blank">{{spoc.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

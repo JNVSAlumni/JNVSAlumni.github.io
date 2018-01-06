@@ -1,0 +1,45 @@
+<div ng-controller="SearchCtrl">
+    <div class="mdl-grid demo-content  ">
+        <div class="demo-card mdl-shadow--2dp abt-card color2 ">
+            <!--<div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="alsearch" ng-model="searchString" placeholder="Enter your search terms">
+            </div>-->
+            <form id="srchbox" onsubmit="searchsubmit();">
+                <input class="srchbx" type="search" id="alsearch" ng-model="searchString" placeholder="Enter your search terms">
+                <input class="srchbtn" type="button">
+            </form>
+            <span id="advsrch" style="float: right;"><a href="#/advsearch" style="color: rgb(83, 111, 123);">Advanced Search</a></span>
+        </div>
+    </div>      
+    <div class="mdl-grid demo-content height-auto" ng-repeat="i in items | filter:searchString">
+        <div class="demo-card mdl-shadow--2dp abt-card height-auto color9">
+            <ul class="demo-list-three mdl-list height-auto">
+                <li class="mdl-list__item mdl-list__item--three-line height-auto">
+                    <i class="material-icons mdl-list__item-avatar mg-rt-10 height-auto">person</i>
+                    <span class="mdl-list__item-primary-content height-auto">
+                        <span><h7><a href="{{i.Social}}" target="_blank">{{i.Name}}&nbsp;<i class="mdl-color-text--blue-grey-400 material-icons mdl" style="font-size: 20px;">open_in_new</i></a></h7></span>
+                        <span class="mdl-list__item-text-body height-auto">
+                            <b>Batch: </b>{{i.Batch}}<br>
+                            <b>Location: </b>{{i.Location}}<br>
+                            <b>Profile: </b>{{i.Profile}}<br>
+                            <b>Designation: </b>{{i.Designation}}<br>
+                            <b>Organisation: </b>{{i.Organisation}}<br>
+                            <b>Institute: </b>{{i.Institute}}<br>
+                            <b>Degree: </b>{{i.Degree}}<br>
+                        </span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mdl-grid demo-content height-auto" ng-if="(items|filter:searchString).length == 0">
+        <div class="demo-card mdl-shadow--2dp abt-card height-auto color9">
+                <h6>Oops! No matching results found :( </h6>
+        </div>
+    </div>
+    <div class="mdl-grid demo-content height-auto" ng-if=" ! items">
+        <div class="demo-card mdl-shadow--2dp abt-card height-auto color9">
+                <p>You can search alumni by Name, Location, Batch, profession etc. Enter your search term above and press Enter!</p>
+        </div>
+    </div>
+</div>
