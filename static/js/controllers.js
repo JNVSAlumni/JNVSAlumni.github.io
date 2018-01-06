@@ -117,13 +117,14 @@ MainAppControllers.controller('CareerCtrl', ['$scope', '$http',
         });
     }]);
 
-MainAppControllers.controller('PostCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-        document.title = "Articles | JNVS Alumni Association";
-        document.getElementById('pgTitle').innerHTML = "Articles";
-        var postId = getQueryStringParameter('id');
-        if (postId != null) {
-            var serviceURL = gitHub_CDN_Base_URL_Posts + postId + ".html?x=" + xTime;
+MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams, $location) {
+        var url = $location.path().split('/');
+        basePath = url[0]
+        var postItem = url[2] ;
+        document.title = "Posts | JNVS Alumni Association";
+        document.getElementById('pgTitle').innerHTML = "Notifications";
+        if (postItem != null) {
+            var serviceURL = basePath +"/partials/post/"+ postItem +".html?x=" + xTime;
             $http.get(serviceURL).success(function (data, status, headers, config) {
                 // $scope.post = data;
                 document.getElementById('divPost').innerHTML = data;
@@ -132,16 +133,25 @@ MainAppControllers.controller('PostCtrl', ['$scope', '$http',
                 console.log("No data found..");
             });
         }
-        else {
-            var serviceURL = gitHub_CDN_Base_URL + "post_links.json?x=" + xTime;
+    });
+
+    MainAppControllers.controller('BlogCtrl', function ($scope, $http, $routeParams, $location) {
+        var url = $location.path().split('/');
+        basePath = url[0]
+        var blogItem = url[2] ;
+        document.title = "Articles | JNVS Alumni Association";
+        document.getElementById('pgTitle').innerHTML = "Articles";
+        if (blogItem != null) {
+            var serviceURL = basePath +"/partials/blog/"+ blogItem +".html?x=" + xTime;
             $http.get(serviceURL).success(function (data, status, headers, config) {
-                $scope.posts = data;
+                // $scope.post = data;
+                document.getElementById('divPost').innerHTML = data;
+                document.title = document.getElementById('divPost').getElementsByTagName('h5')[0].innerHTML + " | JNVS Alumni Association";
             }).error(function (data, status, headers, config) {
                 console.log("No data found..");
             });
         }
-
-    }]);
+    });
 
 MainAppControllers.controller('PrivacyCtrl', ['$scope', '$http',
     function ($scope, $http) {

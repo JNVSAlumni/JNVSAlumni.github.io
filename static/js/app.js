@@ -11,64 +11,76 @@ MainApp.filter('reverse', function() {
 
 MainApp.config(['$routeProvider',
     function ($routeProvider) {
-        $routeProvider.
-            when('/', {
-                templateUrl: 'partials/home.html',
+        $routeProvider
+            .when('/', {
+                templateUrl: '/partials/pages/home.html',
                 controller: 'IndexCtrl'
-            }).
-            when('/home', {
-                templateUrl: 'partials/home.html',
+            })
+            .when('/home', {
+                templateUrl: '/partials/pages/home.html',
                 controller: 'HomeCtrl'
-            }).
-            when('/about', {
-                templateUrl: 'partials/about.html',
+            })
+            .when('/about', {
+                templateUrl: '/partials/pages/about.html',
                 controller: 'AboutCtrl'
-            }).
-            when('/alumni', {
-                templateUrl: 'partials/alumni.html',
+            })
+            .when('/alumni', {
+                templateUrl: '/partials/pages/alumni.html',
                 controller: 'AlumniCtrl'
-            }).
-            when('/search', {
-                templateUrl: 'partials/search.html',
+            })
+            .when('/search', {
+                templateUrl: '/partials/pages/search.html',
                 controller: 'SearchCtrl'
-            }).
-            when('/advsearch', {
-                templateUrl: 'partials/advsearch.html',
+            })
+            .when('/advsearch', {
+                templateUrl: '/partials/pages/advsearch.html',
                 controller: 'AdvSearchCtrl'
-            }).
-            when('/accounts', {
-                templateUrl: 'partials/accounts.html',
+            })
+            .when('/accounts', {
+                templateUrl: '/partials/pages/accounts.html',
                 controller: 'AccountsCtrl'
-            }).
-            when('/media', {
-                templateUrl: 'partials/media.html',
+            })
+            .when('/media', {
+                templateUrl: '/partials/pages/media.html',
                 controller: 'MediaCtrl'
-            }).
-            when('/links', {
-                templateUrl: 'partials/links.html',
+            })
+            .when('/links', {
+                templateUrl: '/partials/pages/links.html',
                 controller: 'LinksCtrl'
-            }).
-            when('/career', {
-                templateUrl: 'partials/career.html',
+            })
+            .when('/career', {
+                templateUrl: '/partials/pages/career.html',
                 controller: 'CareerCtrl'
-            }).
-            when('/post', {
-                templateUrl: 'partials/post.html',
+            })
+            .when('/post', {
+                templateUrl: '/partials/pages/post.html',
                 controller: 'PostCtrl'
-            }).
-            when('/privacy', {
-                templateUrl: 'partials/privacy.html',
+            })
+            .when('/post/:param1', {
+                templateUrl: '/partials/pages/post.html',
+                controller: 'PostCtrl'
+            })
+            .when('/blog', {
+                templateUrl: '/partials/pages/blog.html',
+                controller: 'BlogCtrl'
+            })
+            .when('/blog/:param1', {
+                templateUrl: '/partials/pages/blog.html',
+                controller: 'BlogCtrl'
+            })
+            .when('/privacy', {
+                templateUrl: '/partials/pages/privacy.html',
                 controller: 'PrivacyCtrl'
-            }).
-            when('/copyright', {
-                templateUrl: 'partials/copyright.html',
+            })
+            .when('/copyright', {
+                templateUrl: '/partials/pages/copyright.html',
                 controller: 'CopyrightCtrl'
-            }).
-            when('/error', {
-                templateUrl: 'partials/error.html',
+            })
+            .when('/error', {
+                templateUrl: '/partials/pages/error.html',
                 controller: 'ErrorCtrl'
-            }).
-            otherwise({
+            })
+            .otherwise({
                 redirectTo: '/error'
             });
     }]);
