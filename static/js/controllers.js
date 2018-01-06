@@ -97,12 +97,6 @@ MainAppControllers.controller('MediaCtrl', ['$scope', '$http',
     function ($scope, $http) {
         document.title = "Photos | JNVS Alumni Association";
         document.getElementById('pgTitle').innerHTML = "Photos";
-        var serviceURL = gitHub_CDN_Base_URL + "media_photos.json?x=" + xTime;
-        $http.get(serviceURL).success(function (data, status, headers, config) {
-            $scope.albums = data;
-        }).error(function (data, status, headers, config) {
-            console.log("No data found..");
-        });
     }]);
 
 MainAppControllers.controller('LinksCtrl', ['$scope', '$http',
