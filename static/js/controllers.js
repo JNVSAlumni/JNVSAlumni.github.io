@@ -108,19 +108,7 @@ MainAppControllers.controller('MediaCtrl', ['$scope', '$http',
 MainAppControllers.controller('LinksCtrl', ['$scope', '$http',
     function ($scope, $http) {
         document.title = "Important Links | JNVS Alumni Association";
-        document.getElementById('pgTitle').innerHTML = "Links";
-        var jnvLink_serviceURL = gitHub_CDN_Base_URL + "links_jnv.json?x=" + xTime;
-        $http.get(jnvLink_serviceURL).success(function (data, status, headers, config) {
-            $scope.jnvLinks = data;
-        }).error(function (data, status, headers, config) {
-            console.log("No data found..");
-        });
-        var careerLink_serviceURL = gitHub_CDN_Base_URL + "links_career.json?x=" + xTime;
-        $http.get(careerLink_serviceURL).success(function (data, status, headers, config) {
-            $scope.careerLinks = data;
-        }).error(function (data, status, headers, config) {
-            console.log("No data found..");
-        });
+        document.getElementById('pgTitle').innerHTML = "Links";        
     }]);
 
 MainAppControllers.controller('CareerCtrl', ['$scope', '$http',
