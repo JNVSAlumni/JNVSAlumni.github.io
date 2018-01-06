@@ -133,6 +133,14 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
                 console.log("No data found..");
             });
         }
+        else {
+            var serviceURL = basePath + "/data/blog.json";
+            $http.get(serviceURL).success(function (data, status, headers, config) {
+                $scope.posts = data;
+            }).error(function (data, status, headers, config) {
+                console.log("No data found..");
+            });
+        }
     });
 
     MainAppControllers.controller('BlogCtrl', function ($scope, $http, $routeParams, $location) {

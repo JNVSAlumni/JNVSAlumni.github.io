@@ -1,0 +1,192 @@
+[
+    {
+        "title": "Internship/ Training",
+        "degree": [
+            {
+                "title": "Engineering/Medical/Science",
+                "spoc": [
+                    {
+                        "name": "Bipul Raman (Coordinator)",
+                        "profile": "https://www.facebook.com/TheBipulRaman"
+                    },
+                    {
+                        "name": "Gautam Kumar (Coordinator)",
+                        "profile": "https://www.facebook.com/gautam1891"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Engineering",
+        "degree": [
+            {
+                "title": "B.E. / B.Tech.",
+                "spoc": [
+                    {
+                        "name": "Amit Kumar (IIT Delhi)",
+                        "profile": "https://www.facebook.com/amit.kumar0552"
+                    },
+                    {
+                        "name": "Dayesh Kumar (IIT Kharagpur)",
+                        "profile": "https://www.facebook.com/dayesh.kumar.5"
+                    }
+                ]
+            },
+            {
+                "title": "B.Arch.",
+                "spoc": [
+                    {
+                        "name": "Aman Bharti (NIT Bhopal)",
+                        "profile": "https://www.facebook.com/jackson.aman"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Medical",
+        "degree": [
+            {
+                "title": "MBBS / BDS",
+                "spoc": [
+                    {
+                        "name": "Nitish Kumar (MBBS)",
+                        "profile": "https://www.facebook.com/nitishdpk"
+                    },
+                    {
+                        "name": "Vinod Kumar (BDS)",
+                        "profile": "https://www.facebook.com/vinod.srivastava.9843"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Fashion Designing",
+        "degree": [
+            {
+                "title": "B.Design",
+                "spoc": [
+                    {
+                        "name": "Ravi Prakash (NIFT)",
+                        "profile": "https://www.facebook.com/ravi.prakash.33449"
+                    },
+                    {
+                        "name": "Neha Kumari (NIFT)",
+                        "profile": "https://www.facebook.com/profile.php?id=100002857912933"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Humanities & Social Sciences",
+        "degree": [
+            {
+                "title": "B.A./M.A./M.Phil./Ph.D.",
+                "spoc": [
+                    {
+                        "name": "Sajid Hussain (DU/Jamia)",
+                        "profile": "https://www.facebook.com/sajid.h.abid"
+                    },
+                    {
+                        "name": "Santosh Kumar (DU/Jamia)",
+                        "profile": "https://www.facebook.com/santoshforindia1992"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Science / Maths",
+        "degree": [
+            {
+                "title": "B.Sc. - Science",
+                "spoc": [
+                    {
+                        "name": "Vineet Kumar (NISER Bhubaneshwar)",
+                        "profile": "https://www.facebook.com/vineet202"
+                    },
+                    {
+                        "name": "Aditya Raj (IIT Roorkee)",
+                        "profile": "https://www.facebook.com/profile.php?id=100005928871884"
+                    }
+                ]
+            },
+            {
+                "title": "B.Sc. - Mathematics / B.Stat",
+                "spoc": [
+                    {
+                        "name": "Kumar Kamlesh (ISI Bangalore)",
+                        "profile": "https://www.facebook.com/kamlesh.isi"
+                    }
+                ]
+            },
+            {
+                "title": "B.Ed. - (Teaching)",
+                "spoc": [
+                    {
+                        "name": "Praveen Mishra",
+                        "profile": "https://www.facebook.com/profile.php?id=100009213789160"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Management",
+        "degree": [
+            {
+                "title": "MBA, BBA",
+                "spoc": [
+                    {
+                        "name": "Amit Kumar Jha (Sr. Manager, ICICI)",
+                        "profile": "https://www.facebook.com/amit.k.jha.77"
+                    },
+                    {
+                        "name": "Prem Prakash (Sr. Manager, SBI)",
+                        "profile": "https://www.facebook.com/premliba"
+                    }
+                ]
+            },
+            {
+                "title": "CS",
+                "spoc": [
+                    {
+                        "name": "Sumit Kumar (ICSI)",
+                        "profile": "https://www.facebook.com/sumit.kumar.5036"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Acting / Theater",
+        "degree": [
+            {
+                "title": "Acting, Modeling, Drama, Film making",
+                "spoc": [
+                    {
+                        "name": "Nishant Singh (TV Actor)",
+                        "profile": "https://www.facebook.com/profile.php?id=100000279141295"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Sports",
+        "degree": [
+            {
+                "title": "Sports, Games, Athletics, Physical Education",
+                "spoc": [
+                    {
+                        "name": "Rakesh Shera",
+                        "profile": "https://www.facebook.com/rakesh.shera.752"
+                    }
+                ]
+            }
+        ]
+    }
+]
