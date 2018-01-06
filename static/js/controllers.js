@@ -162,7 +162,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
         else {
             var serviceURL = basePath + "/data/blog.json?x=" + xTime;
             $http.get(serviceURL).success(function (data, status, headers, config) {
-                $scope.posts = data;
+                $scope.blogs = data;
             }).error(function (data, status, headers, config) {
                 console.log("No data found..");
             });
