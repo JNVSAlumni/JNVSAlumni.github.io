@@ -134,7 +134,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
             });
         }
         else {
-            var serviceURL = basePath + "/data/post.json";
+            var serviceURL = basePath + "/data/post.json?x=" + xTime;
             $http.get(serviceURL).success(function (data, status, headers, config) {
                 $scope.posts = data;
             }).error(function (data, status, headers, config) {
@@ -160,7 +160,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
             });
         }
         else {
-            var serviceURL = basePath + "/data/blog.json";
+            var serviceURL = basePath + "/data/blog.json?x=" + xTime;
             $http.get(serviceURL).success(function (data, status, headers, config) {
                 $scope.posts = data;
             }).error(function (data, status, headers, config) {
