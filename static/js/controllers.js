@@ -134,7 +134,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
             });
         }
         else {
-            var serviceURL = basePath + "/data/blog.json";
+            var serviceURL = basePath + "/data/post.json";
             $http.get(serviceURL).success(function (data, status, headers, config) {
                 $scope.posts = data;
             }).error(function (data, status, headers, config) {
@@ -155,6 +155,14 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
                 // $scope.post = data;
                 document.getElementById('divPost').innerHTML = data;
                 document.title = document.getElementById('divPost').getElementsByTagName('h5')[0].innerHTML + " | JNVS Alumni Association";
+            }).error(function (data, status, headers, config) {
+                console.log("No data found..");
+            });
+        }
+        else {
+            var serviceURL = basePath + "/data/blog.json";
+            $http.get(serviceURL).success(function (data, status, headers, config) {
+                $scope.posts = data;
             }).error(function (data, status, headers, config) {
                 console.log("No data found..");
             });
