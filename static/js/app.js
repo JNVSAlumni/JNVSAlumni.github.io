@@ -75,6 +75,10 @@ MainApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '/partials/pages/copyright.html',
             controller: 'CopyrightCtrl'
         })
+        .when('/regulations', {
+            templateUrl: '/partials/pages/regulations.html',
+            controller: 'RegulationsCtrl'
+        })
         .when('/error', {
             templateUrl: '/partials/pages/error.html',
             controller: 'ErrorCtrl'
@@ -406,6 +410,11 @@ MainAppControllers.controller('PrivacyCtrl', function ($scope, $http) {
 MainAppControllers.controller('CopyrightCtrl', function ($scope, $http) {
     document.title = "Copyright Policy | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Copyright Policy";
+});
+
+MainAppControllers.controller('RegulationsCtrl', function ($scope, $http) {
+    document.title = "Regulations | JNVS Alumni Association";
+    document.getElementById('pgTitle').innerHTML = "Regulations";
 });
 
 MainAppControllers.controller('ErrorCtrl', function ($scope, $http) {
