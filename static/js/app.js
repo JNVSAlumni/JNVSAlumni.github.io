@@ -129,12 +129,6 @@ function profileSelection() {
     });
 }
 
-function searchsubmit() {
-    $('#alsearch').blur();
-    window.location = window.location.href.split('?')[0] + "?q=" + $('#alsearch').val();
-    return 0;
-}
-
 function validateForm() {
     var _name = $('#entry_2059521736').val();
     var _batch = $('#entry_23321339').val();
@@ -169,8 +163,13 @@ function alumniFormFailure() {
     alert('Somethimg went wrong !! Refresh the page.');
 }
 
+function searchsubmit() {
+    $('#alsearch').blur();
+    window.location = window.location.href.split('?')[0] + "?q=" + $('#alsearch').val();
+    return 0;
+}
+
 function pupulateShareLinks() {
-    console.log('hello');
     var url = encodeURI(window.location);
     var title = encodeURI(document.title);
     $('#shareFacebook').attr('href', "https://www.facebook.com/dialog/share?app_id=425089481182651&href=" + url + "&t=" + title);
@@ -183,7 +182,20 @@ function pupulateShareLinks() {
     $('#shareGoogleplus').attr('target', "new");
 }
 
-var MainAppControllers = angular.module('MainAppControllers', []);
+// Function to retrieve a query string value.
+function getQueryStringParameter(paramToRetrive) {
+    try {
+        var params = document.URL.split("?")[1].split("&");
+        for (var i = 0; i < params.length; i = i + 1) {
+            var singleParam = params[i].split("=");
+            if (singleParam[0] == paramToRetrive) return singleParam[1];
+        }
+    }
+    catch (e) {
+        console.log('No Query Sring Found');
+    }
+}
+
 function getFormattedDate() {
     var date = new Date();
     var str = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes() + "-" + date.getSeconds();
@@ -191,6 +203,10 @@ function getFormattedDate() {
 }
 
 var xTime = getFormattedDate();
+
+// Controllers
+
+var MainAppControllers = angular.module('MainAppControllers', []);
 
 MainAppControllers.controller('IndexCtrl', function ($scope, $http) {
     document.getElementById('pgTitle').innerHTML = "JNVS Alumni";
@@ -392,18 +408,3 @@ MainAppControllers.controller('ErrorCtrl', function ($scope, $http) {
     document.title = "Error | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Error Page";
 });
-
-
-// Function to retrieve a query string value.
-function getQueryStringParameter(paramToRetrive) {
-    try {
-        var params = document.URL.split("?")[1].split("&");
-        for (var i = 0; i < params.length; i = i + 1) {
-            var singleParam = params[i].split("=");
-            if (singleParam[0] == paramToRetrive) return singleParam[1];
-        }
-    }
-    catch (e) {
-        console.log('No Query Sring Found');
-    }
-}
