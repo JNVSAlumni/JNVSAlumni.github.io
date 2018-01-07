@@ -203,6 +203,11 @@ function getFormattedDate() {
 }
 
 var xTime = getFormattedDate();
+var dataPath = "/data";
+var blogPath = "/partials/post";
+var postPath = "/partials/blog";
+var alumniDSvc = "https://script.google.com/macros/s/AKfycby04N7LotTrhxNZ8wMPRW9Pskoo2bRt4HnQ3NwECHGpNK1V3Ywg/exec";
+var accountsSvc = "https://script.google.com/macros/s/AKfycbzGS-NsFvOXmnWs_SCm16ccWJyiXiYEnsTh5ZV3jbCuvELsYIMD/exec";
 
 // Controllers
 
@@ -215,7 +220,7 @@ MainAppControllers.controller('IndexCtrl', function ($scope, $http) {
 MainAppControllers.controller('HomeCtrl', function ($scope, $http) {
     document.title = "JNV Sitamarhi Alumni Association";
     document.getElementById('pgTitle').innerHTML = "JNVS Alumni";
-    var serviceURL = "/data/home_news.json?x=" + xTime;
+    var serviceURL = dataPath + "/home_news.json?x=" + xTime;
     $http.get(serviceURL)
         .success(function (data, status, headers, config) {
             $scope.news = data;
@@ -246,8 +251,7 @@ MainAppControllers.controller('SearchCtrl', function ($scope, $http) {
         $("#progressBar").show();
         $scope.status = "progress";
         $scope.searchString = decodeURI(searchText);
-        var serv = "https://script.google.com/macros/s/AKfycbwTqZ2zG6MtLgCZq4vhUo_oMKUYOYQyAMc3u8rGkHFhao3emA0/exec";
-        var serviceURL = "https://script.google.com/macros/s/AKfycby04N7LotTrhxNZ8wMPRW9Pskoo2bRt4HnQ3NwECHGpNK1V3Ywg/exec";
+        var serviceURL = alumniDSvc;
         $http.get(serviceURL)
             .success(function (data, status, headers, config) {
                 $scope.items = data;
@@ -269,7 +273,7 @@ MainAppControllers.controller('AccountsCtrl', function ($scope, $http) {
     $("#progressBar").show();
     document.title = "Accounts | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Accounts";
-    var serviceURL = "https://script.google.com/macros/s/AKfycbzGS-NsFvOXmnWs_SCm16ccWJyiXiYEnsTh5ZV3jbCuvELsYIMD/exec";
+    var serviceURL = accountsSvc;
     $http.get(serviceURL)
         .success(function (data, status, headers, config) {
             $scope.transactions = data;
@@ -292,7 +296,7 @@ MainAppControllers.controller('AccountsCtrl', function ($scope, $http) {
 MainAppControllers.controller('MediaCtrl', function ($scope, $http) {
     document.title = "Photos | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Photos";
-    var serviceURL = "/data/media_photos.json?x=" + xTime;
+    var serviceURL = dataPath + "/media_photos.json?x=" + xTime;
     $http.get(serviceURL)
         .success(function (data, status, headers, config) {
             $scope.albums = data;
@@ -305,7 +309,7 @@ MainAppControllers.controller('MediaCtrl', function ($scope, $http) {
 MainAppControllers.controller('LinksCtrl', function ($scope, $http) {
     document.title = "Important Links | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Links";
-    var jnvLink_serviceURL = "/data/links_jnv.json?x=" + xTime;
+    var jnvLink_serviceURL = dataPath + "/links_jnv.json?x=" + xTime;
     $http.get(jnvLink_serviceURL)
         .success(function (data, status, headers, config) {
             $scope.jnvLinks = data;
@@ -313,7 +317,7 @@ MainAppControllers.controller('LinksCtrl', function ($scope, $http) {
         .error(function (data, status, headers, config) {
             console.log("No data found..");
         });
-    var careerLink_serviceURL = "/data/links_career.json?x=" + xTime;
+    var careerLink_serviceURL = dataPath + "/links_career.json?x=" + xTime;
     $http.get(careerLink_serviceURL)
         .success(function (data, status, headers, config) {
             $scope.careerLinks = data;
@@ -326,7 +330,7 @@ MainAppControllers.controller('LinksCtrl', function ($scope, $http) {
 MainAppControllers.controller('CareerCtrl', function ($scope, $http) {
     document.title = "Career | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Career";
-    var serviceURL = "/data/career.json?x=" + xTime;
+    var serviceURL = dataPath + "/career.json?x=" + xTime;
     $http.get(serviceURL)
         .success(function (data, status, headers, config) {
             $scope.careers = data;
@@ -343,7 +347,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
     document.title = "Posts | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Notifications";
     if (postItem != null) {
-        var serviceURL = basePath + "/partials/post/" + postItem + ".html?x=" + xTime;
+        var serviceURL = postPath + "/" + postItem + ".html?x=" + xTime;
         $http.get(serviceURL)
             .success(function (data, status, headers, config) {
                 document.getElementById('divPost').innerHTML = data;
@@ -354,7 +358,7 @@ MainAppControllers.controller('PostCtrl', function ($scope, $http, $routeParams,
             });
     }
     else {
-        var serviceURL = basePath + "/data/post.json?x=" + xTime;
+        var serviceURL = dataPath + "/post.json?x=" + xTime;
         $http.get(serviceURL)
             .success(function (data, status, headers, config) {
                 $scope.posts = data;
@@ -372,7 +376,7 @@ MainAppControllers.controller('BlogCtrl', function ($scope, $http, $routeParams,
     document.title = "Articles | JNVS Alumni Association";
     document.getElementById('pgTitle').innerHTML = "Articles";
     if (blogItem != null) {
-        var serviceURL = basePath + "/partials/blog/" + blogItem + ".html?x=" + xTime;
+        var serviceURL = blogPath + "/" + blogItem + ".html?x=" + xTime;
         $http.get(serviceURL)
             .success(function (data, status, headers, config) {
                 document.getElementById('divPost').innerHTML = data;
@@ -383,7 +387,7 @@ MainAppControllers.controller('BlogCtrl', function ($scope, $http, $routeParams,
             });
     }
     else {
-        var serviceURL = basePath + "/data/blog.json?x=" + xTime;
+        var serviceURL = dataPath + "/blog.json?x=" + xTime;
         $http.get(serviceURL)
             .success(function (data, status, headers, config) {
                 $scope.blogs = data;
