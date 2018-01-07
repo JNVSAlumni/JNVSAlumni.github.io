@@ -3,15 +3,8 @@
         <div class="demo-card mdl-shadow--2dp abt-card color4">
             <h5>JNV Links</h5>
             <ul style="list-style: none;">
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="http://jnvsitamarhi.bih.nic.in" target="_blank">JNVS Sitamarhi Website</a>
-                </li>
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="http://www.nvshq.org" target="_blank">Navodaya Vidyalaya Samiti</a>
-                </li>
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="http://www.navodaya.net" target="_blank">AINAA</a>
-                </li>
+                <li ng-repeat="i in jnvLinks"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}"
+                        target="_blank">{{i.title}}</a></li>
             </ul>
         </div>
     </div>
@@ -19,15 +12,8 @@
         <div class="demo-card mdl-shadow--2dp abt-card color5">
             <h5>Career Links</h5>
             <ul style="list-style: none;">
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="http://www.shiksha.com/career-options-after-12th" target="_blank">Career options after 12th</a>
-                </li>
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="https://www.toppr.com" target="_blank">E-Learning at Toppr.com</a>
-                </li>
-                <li><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
-                    <a href="http://www.eltf.in" target="_blank">Educational Loan Info</a>
-                </li>
+                <li ng-repeat="i in careerLinks"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}"
+                        target="_blank">{{i.title}}</a></li>
             </ul>
         </div>
     </div>

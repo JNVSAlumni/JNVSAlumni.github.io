@@ -13,8 +13,9 @@
             <div ng-repeat="degree in career.degree">
                 <h6>{{degree.title}}</h6>
                 <ul style="list-style: none;">
-                    <li ng-repeat="spoc in degree.spoc"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{spoc.profile}}"
-                            target="_blank">{{spoc.name}}</a></li>
+                    <li ng-repeat="spoc in degree.spoc"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;
+                        <a href="{{spoc.profile}}" target="_blank">{{spoc.name}}</a>
+                    </li>
                 </ul>
             </div>
         </div>
