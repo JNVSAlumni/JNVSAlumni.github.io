@@ -32,7 +32,7 @@ MainApp.config(['$routeProvider', function ($routeProvider) {
             controller: 'SearchCtrl'
         })
         .when('/advsearch', {
-            templateUrl: '/partials/pages/advsearch.html',
+            templateUrl: '/partials/pages/asearch.html',
             controller: 'AdvSearchCtrl'
         })
         .when('/accounts', {
