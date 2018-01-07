@@ -204,8 +204,8 @@ function getFormattedDate() {
 
 var xTime = getFormattedDate();
 var dataPath = "/data";
-var blogPath = "/partials/post";
-var postPath = "/partials/blog";
+var blogPath = "/partials/blog";
+var postPath = "/partials/post";
 var alumniDSvc = "https://script.google.com/macros/s/AKfycby04N7LotTrhxNZ8wMPRW9Pskoo2bRt4HnQ3NwECHGpNK1V3Ywg/exec";
 var accountsSvc = "https://script.google.com/macros/s/AKfycbzGS-NsFvOXmnWs_SCm16ccWJyiXiYEnsTh5ZV3jbCuvELsYIMD/exec";
 
