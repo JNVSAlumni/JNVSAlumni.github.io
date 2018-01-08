@@ -1,4 +1,4 @@
-var dataPath = "https://jnvsitamarhi.org/SiteData";
+var dataPath = "/SiteData";
 var blogPath = "/partials/blog";
 var postPath = "/partials/post";
 var alumniDSvc = "https://script.google.com/macros/s/AKfycby04N7LotTrhxNZ8wMPRW9Pskoo2bRt4HnQ3NwECHGpNK1V3Ywg/exec";
