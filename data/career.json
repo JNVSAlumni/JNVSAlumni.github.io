@@ -63,38 +63,6 @@
         ]
     },
     {
-        "title": "Fashion Designing",
-        "degree": [
-            {
-                "title": "B.Design",
-                "spoc": [
-                    {
-                        "name": "Vikas Kumar (NIFT)",
-                        "profile": "https://www.facebook.com/aviral.raj.311"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "title": "Humanities & Social Sciences",
-        "degree": [
-            {
-                "title": "B.A./M.A./M.Phil./Ph.D.",
-                "spoc": [
-                    {
-                        "name": "Sajid Hussain (DU/Jamia)",
-                        "profile": "https://www.facebook.com/sajid.h.abid"
-                    },
-                    {
-                        "name": "Santosh Kumar (DU/Jamia)",
-                        "profile": "https://www.facebook.com/santoshforindia1992"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "title": "Science / Maths",
         "degree": [
             {
@@ -130,6 +98,38 @@
             }
         ]
     },
+    {
+        "title": "Fashion Designing",
+        "degree": [
+            {
+                "title": "B.Design",
+                "spoc": [
+                    {
+                        "name": "Vikas Kumar (NIFT)",
+                        "profile": "https://www.facebook.com/aviral.raj.311"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Humanities & Social Sciences",
+        "degree": [
+            {
+                "title": "B.A./M.A./M.Phil./Ph.D.",
+                "spoc": [
+                    {
+                        "name": "Sajid Hussain (DU/Jamia)",
+                        "profile": "https://www.facebook.com/sajid.h.abid"
+                    },
+                    {
+                        "name": "Santosh Kumar (DU/Jamia)",
+                        "profile": "https://www.facebook.com/santoshforindia1992"
+                    }
+                ]
+            }
+        ]
+    },    
     {
         "title": "Management",
         "degree": [
