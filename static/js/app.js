@@ -139,6 +139,11 @@ function profileSelection() {
     });
 }
 
+function capitalize(textboxid, str) {
+    var output =  str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    document.getElementById(textboxid).value = output;
+}
+
 function validateForm() {
     var _name = $('#entry_2059521736').val();
     var _batch = $('#entry_23321339').val();
