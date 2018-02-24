@@ -140,7 +140,7 @@ function profileSelection() {
 }
 
 function capitalize(textboxid, str) {
-    var output =  str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    var output =  str.replace(/([^\W_]+[^\s.-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     document.getElementById(textboxid).value = output;
 }
 
