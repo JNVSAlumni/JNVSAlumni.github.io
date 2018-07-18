@@ -13,7 +13,7 @@
             </div>
         </div>
         <div ng-class="i.Credit > 0 ? creditClass : debitClass" ng-repeat="i in transactions | reverse">
-            <span class="fl-lt"><i class="material-icons  icon-fix">event</i>{{i.Date| date:'dd MM yyyy'}}</span>            
+            <span class="fl-lt"><i class="material-icons  icon-fix">event</i>{{i.Date| date:'dd/MM/yyyy'}}</span>            
             <span class="fl-lt" ng-if="i.Credit"><i class="material-icons  icon-fix">add_circle</i>&#8377; {{i.Credit}}</span>
             <span class="fl-lt" ng-if="i.Debit"><i class="material-icons  icon-fix">remove_circle</i>&#8377; {{i.Debit}}</span>
             <span class="fl-lt"><i class="material-icons  icon-fix">monetization_on</i>&#8377; {{i.Balance}}</span>                
