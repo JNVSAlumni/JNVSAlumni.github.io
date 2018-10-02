@@ -18,7 +18,7 @@ The source files can also be usd for references. Contribution can be made throug
 You can raise defects or request new features here: https://github.com/JNVSAlumni/JNVSAlumni.github.io/issues
 
 # License
-All files within this repo are released under the [MIT (OSI) License]( https://en.wikipedia.org/wiki/MIT_License) as per the [LICENSE file](https://github.com/JNVSAlumni/JNVSAlumni.github.io/blob/master/LICENSE.md) stored in the root of this repo. 
+All files within this repo are released under the [MIT (OSI) License]( https://en.wikipedia.org/wiki/MIT_License) as per the [LICENSE file](https://github.com/JNVSAlumni/JNVSAlumni.github.io/blob/master/LICENSE) stored in the root of this repo. 
 
 # Third party libraries and license
 |Library|Version|Author|Licence|
