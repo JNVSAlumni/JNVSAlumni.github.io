@@ -12,7 +12,7 @@ Each branch is configured to serve website on GitHub Pages.
 |`master`|`JNVSAlumni.github.io:master`|https://jnvsitamarhi.org|
 
 # Contribute!
-The source files can also be usd for references. Contribution can be made through pull request. Feel free to fork this repo for learning as well.
+The source files can also be used for references. Contribution can be made through pull request. Feel free to fork this repo for learning as well.
 
 # Defects / New feature request
 You can raise defects or request new features here: https://github.com/JNVSAlumni/JNVSAlumni.github.io/issues
