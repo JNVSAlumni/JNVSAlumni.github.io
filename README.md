@@ -23,5 +23,5 @@ All files within this repo are released under the [MIT (OSI) License]( https://e
 # Third party libraries and license
 |Library|Version|Author|Licence|
 |---|---|---|---|
-|Material Design|1.1.1|Google, Inc.|Apache-2.0( https://en.wikipedia.org/wiki/Apache_License)|
-|AngularJS|1.4.9|Google, Inc.|MIT( https://en.wikipedia.org/wiki/MIT_License)|
+|Material Design|1.1.1|Google, Inc.|[Apache-2.0]( https://en.wikipedia.org/wiki/Apache_License)|
+|AngularJS|1.4.9|Google, Inc.|[MIT]( https://en.wikipedia.org/wiki/MIT_License)|
