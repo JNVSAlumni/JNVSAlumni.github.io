@@ -21,6 +21,7 @@ You can raise defects or request new features here: https://github.com/JNVSAlumn
 All files within this repo are released under the [MIT (OSI) License]( https://en.wikipedia.org/wiki/MIT_License) as per the [LICENSE file](https://github.com/JNVSAlumni/JNVSAlumni.github.io/blob/master/LICENSE) stored in the root of this repo. 
 
 Third party libraries and license are summarised below:
+
 |Library|Version|Author|Licence|
 |---|---|---|---|
 |Material Design|1.1.1|Google, Inc.|[Apache-2.0]( https://en.wikipedia.org/wiki/Apache_License)|
