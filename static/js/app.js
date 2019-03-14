@@ -4,6 +4,17 @@ var postPath = "/partials/post";
 var alumniDSvc = "https://script.google.com/macros/s/AKfycby04N7LotTrhxNZ8wMPRW9Pskoo2bRt4HnQ3NwECHGpNK1V3Ywg/exec";
 var accountsSvc = "https://script.google.com/macros/s/AKfycbzGS-NsFvOXmnWs_SCm16ccWJyiXiYEnsTh5ZV3jbCuvELsYIMD/exec";
 
+$(document).ready(function () {
+    if (screen.width < 1024) {
+        $('.nav-links').click(function () { $('.mdl-layout__drawer').toggleClass('is-visible'); $('.mdl-layout__obfuscator').toggleClass('is-visible'); });
+    }
+    $('.demo-layout').height($(document).height());
+});
+
+window.onload = function () {
+    $("#progressBar").hide();
+};
+
 var MainApp = angular.module('MainApp', [
     'ngRoute',
     'MainAppControllers'
