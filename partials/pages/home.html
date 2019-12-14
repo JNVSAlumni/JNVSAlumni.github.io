@@ -25,7 +25,7 @@
     <div class="mdl-grid demo-content" ng-repeat="i in news">
         <div class="demo-card mdl-shadow--2dp abt-card color10" ng-if="i.title.length > 0">                  
                 <h5>{{i.title}}</h5>
-                <p><b>{{i.date}} | </b>{{i.news}}</p> 
+                <p><b>Posted on: {{i.date}} | </b>{{i.news}}</p> 
                 <span ng-if="i.link.length > 0"><i class="mdl-color-text--blue-grey-400 material-icons mdl">link</i>&nbsp;<a href="{{i.link}}" target="_blank">Read More..</a></span>            
         </div>        
     </div>
